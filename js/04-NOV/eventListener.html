@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Listener</title>
+</head>
+<body>
+    <!-- <button onclick="alert('button is clicked!')">Click Me to see the magic!</button> -->
+    <button>Click Me to see the magic!</button>
+
+    <!-- <input type="text" onfocus="console.log('Input box is selected!')"> -->
+    <input type="text">
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum delectus esse voluptas quo nisi mollitia maxime. Odit libero voluptatibus atque.</div>
+
+    <script>
+        const btn = document.querySelector('button');
+
+        btn.onclick = () => {
+            alert("Button is clicked!");
+        }
+
+        const ipt = document.querySelector('input');
+
+        ipt.addEventListener('focus', () => {
+            console.log("focus: The input box is selected!");
+        })
+
+        ipt.addEventListener('blur', () => {
+            console.log("blur: Ooops the element was unselected!");
+        });
+
+        const divi = document.querySelector('div');
+
+        divi.addEventListener('mouseover', () => {
+            console.log("moveover: you just touched me!");
+        });
+
+        divi.addEventListener('mouseout', () => {
+            console.log("mouseout: ohh you are leaving!");
+        });
+    </script>
+</body>
+</html>
